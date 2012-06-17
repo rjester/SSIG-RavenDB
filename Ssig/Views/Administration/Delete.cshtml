@@ -1,0 +1,18 @@
+﻿@model Ssig.ViewModels.AdminDeleteViewModel
+@{
+    ViewBag.Title = "Delete";
+}
+<div id="body">
+    <section class="content-wrapper">
+        <h2>Delete</h2>
+
+        <h3>Are you sure you want to delete '@Model.Meeting.Name'?</h3>
+        @using (Html.BeginForm()) {
+            <p>
+                <input type="submit" value="Delete" />
+                |
+        @Html.ActionLink("Back to List", "Index")
+            </p>
+        }
+    </section>
+</div>

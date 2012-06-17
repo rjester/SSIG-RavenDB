@@ -1,0 +1,17 @@
+﻿@model Ssig.ViewModels.MeetingDetailViewModel
+@{
+    ViewBag.Title = "Details";
+}
+<div id="body">
+    <section class="content-wrapper">
+        <h2></h2>
+
+        <h3>@Model.Meeting.Name</h3>
+        <div>@Model.Meeting.MeetingDate.ToString("dddd, MMMM dd, yyyy")</div>
+        <div>@Html.DisplayFor(model => model.Meeting.Description)</div>
+
+        <p>
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </section>
+</div>

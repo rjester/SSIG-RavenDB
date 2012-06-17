@@ -1,0 +1,15 @@
+﻿@model Ssig.ViewModels.MeetingListViewModel
+@{
+    ViewBag.Title = "Index";
+}
+<div id="body">
+    <section class="content-wrapper">
+        <h2></h2>
+
+        @foreach (var item in Model.Meetings) {
+            <h4>@Html.ActionLink(item.Name, "Details", new { id = item.Id })</h4>
+            <div>Meeting Date: @item.MeetingDate.ToString("dddd, MMMM dd, yyyy")</div>
+            <div>@item.Description</div>
+        }
+    </section>
+</div>

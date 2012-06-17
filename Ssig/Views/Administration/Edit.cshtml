@@ -1,0 +1,28 @@
+﻿@model Ssig.ViewModels.AdminEditViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+<div id="body">
+    <section class="content-wrapper">
+        <h2>Edit</h2>
+
+        @using (Html.BeginForm()) {
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>AdminEditViewModel</legend>
+                @Html.EditorFor(model => model.Meeting)
+                <p>
+                    <input type="submit" value="Save" />
+                </p>
+            </fieldset>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </section>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

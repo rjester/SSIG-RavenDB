@@ -1,0 +1,42 @@
+﻿@model Ssig.ViewModels.HomeViewModel
+<div id="body">
+    <section class="content-wrapper">
+        
+        <h3>Welcome</h3>
+
+        <p>
+            We have meetings on the first Tuesday of most months.  
+            Our group meets at the Greeville Campus of ECPI. Our 
+            normal room is room #236 but check the visual displays 
+            when you arrive to confirm.
+        </p>
+
+        <p>
+            In an ongoing attempt to make the content presented 
+            useful to our members we start each meeting with a short 
+            Q&amp;A session.  Unless noted in the meeting notes the schedule 
+            for each meeting will be:
+            <ul>
+                <li>6:00 - 6:30 - Food and a chance to meet other SQL Server users.</li>
+                <li>6:30 - 6:45 - General Q&amp;A session & Announcements</li>
+                <li>6:45 - 8:15 - Presentation(s)</li>
+                <li>8:15 - 8:30 - Door prizes and Question & Answer session</li>
+            </ul>
+
+        </p>
+
+    </section>
+    <section class="content-wrapper">
+            <h3>Next Meeting</h3>
+
+            <h4>
+                @Html.DisplayFor(model => model.NextMeeting.Name)
+            </h4>
+            <div>
+                Meeting Date: @Model.NextMeeting.MeetingDate.ToString("dddd, MMMM dd, yyyy")
+            </div>
+            <div>
+                @Html.DisplayFor(model => model.NextMeeting.Description)
+            </div>
+    </section>
+</div>
