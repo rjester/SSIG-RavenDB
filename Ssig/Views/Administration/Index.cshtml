@@ -30,7 +30,7 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Description)
+                    @Html.Raw(HttpUtility.HtmlDecode(item.Description))
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.MeetingDate)

@@ -27,6 +27,10 @@ namespace Ssig {
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            //var b = new ScriptBundle("~/bundles/kendo").Include(
+            //            "~/Scripts/kendo*");
+            //b.IncludeDirectory("~/Scripts/kendo");
+            //BundleTable.Bundles.Add(b);
             //var root = new MeetingCompositionRoot();
             //ControllerBuilder.Current.SetControllerFactory(root.ControllerFactory);
 

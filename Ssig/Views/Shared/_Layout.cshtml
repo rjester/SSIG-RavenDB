@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/themes/base/css", "~/Content/css")
+    @Styles.Render("~/Content/kendo/base/css")
+    @Styles.Render("~/Content/kendo/metro/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/kendo")
+    @RenderSection("scripts", required: false)
 </head>
 <body>
     <header class="content-wrapper">
@@ -24,7 +29,5 @@
         </nav>
     </header>
     @RenderBody()
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

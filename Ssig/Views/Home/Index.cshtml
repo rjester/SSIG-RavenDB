@@ -36,7 +36,7 @@
                 Meeting Date: @Model.NextMeeting.MeetingDate.ToString("dddd, MMMM dd, yyyy")
             </div>
             <div>
-                @Html.DisplayFor(model => model.NextMeeting.Description)
+                @Html.Raw(HttpUtility.HtmlDecode(Model.NextMeeting.Description))
             </div>
     </section>
 </div>

@@ -17,6 +17,10 @@ namespace Ssig {
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/kendo").Include(
+                        "~/Scripts/kendo/kendo.all.min.js", 
+                        "~/Scripts/kendo/kendo.aspnetmvc.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
@@ -32,6 +36,13 @@ namespace Ssig {
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            bundles.Add(new StyleBundle("~/Content/kendo/base/css").Include(
+                        "~/Content/kendo/kendo.common.min.css",
+                        "~/Content/kendo/kendo.default.min.css"));
+
+            bundles.Add(new StyleBundle("~/Content/kendo/metro/css").Include(
+                        "~/Content/kendo/kendo.metro.min.css"));
         }
     }
 }

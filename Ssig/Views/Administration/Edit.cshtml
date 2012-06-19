@@ -9,13 +9,43 @@
         @using (Html.BeginForm()) {
             @Html.ValidationSummary(true)
 
-            <fieldset>
-                <legend>AdminEditViewModel</legend>
-                @Html.EditorFor(model => model.Meeting)
-                <p>
+                            <div class="editor-label">
+                    @Html.LabelFor(model => model.Meeting.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Meeting.Name)
+                    @Html.ValidationMessageFor(model => model.Meeting.Name)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Meeting.MeetingDate)
+                </div>
+                <div class="editor-field">
+                    @(Html.Kendo().DatePicker()
+                        .Name("Meeting.MeetingDate")
+                        .Value(Model.Meeting.MeetingDate))
+                    @Html.ValidationMessageFor(model => model.Meeting.MeetingDate)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Meeting.Description)
+                </div>
+
+                @(Html.Kendo().Editor()
+                    .Name("Meeting.Description")
+                    .HtmlAttributes(new { style = "width: 740px;height:440px" })
+                    .Value(HttpUtility.HtmlDecode(Model.Meeting.Description))
+                )
+                @Html.ValidationMessageFor(model => model.Meeting.Description)
+
+
+                
+
+
+            
+
+            
+                            <p>
                     <input type="submit" value="Save" />
                 </p>
-            </fieldset>
         }
 
         <div>
